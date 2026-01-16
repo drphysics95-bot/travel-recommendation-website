@@ -11,3 +11,21 @@ document.addEventListener ('DOMContentLoaded', () => {
         console.log('Contact form not found on the page.');
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const searchBtn = document.getElementById("searchBtn");
+  const clearBtn = document.getElementById("clearBtn");
+  const searchInput = document.getElementById("searchInput");
+
+  if (searchBtn) {
+    searchBtn.addEventListener("click", () => {
+      alert("You searched for: " + searchInput.value);
+    });
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener("click", () => {
+      searchInput.value = "";
+    });
+  }
+});
